@@ -3,456 +3,264 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Theo Dõi Chu Kỳ</title>
-
+    <title>Nhật ký sức khỏe</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-gray-100 p-4">
+  <body class="bg-pink-50 text-gray-800 font-sans">
     <div class="form-container">
-      <h1 class="text-3xl font-bold text-center text-purple-800 mb-6">
-        Theo Dõi Sức Khỏe Hàng Ngày
-      </h1>
+      <header class="text-center mb-8">
+        <h1 class="text-3xl sm:text-4xl font-bold text-fuchsia-800">
+          Nhật ký sức khỏe của bạn
+        </h1>
+        <p class="text-fuchsia-600 mt-2 text-lg italic">
+          Ghi lại cảm nhận của bạn mỗi ngày
+        </p>
+      </header>
       <form id="healthForm" class="space-y-6">
-        <!-- Phần Tình trạng chung -->
-        <div>
-          <label for="feelings" class="block text-gray-700 font-semibold mb-2"
-            >Hôm nay cảm thấy thế nào?</label
+        <div class="card">
+          <label class="section-title"
+            ><i class="fas fa-heartbeat icon"></i>Hôm nay bạn cảm thấy thế
+            nào?</label
           >
-          <div class="flex flex-col sm:flex-row gap-4">
-            <label class="inline-flex items-center"
-              ><input
-                type="radio"
-                name="feelings"
-                value="Tốt"
-                class="form-radio text-purple-600"
-              />
-              Tốt</label
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="feelings" value="Tốt" />
+              <span class="radio-custom"></span> Tốt</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="radio"
-                name="feelings"
-                value="Bình thường"
-                class="form-radio text-purple-600"
-              />
-              Bình thường</label
+            <label class="radio-label">
+              <input type="radio" name="feelings" value="Bình thường" />
+              <span class="radio-custom"></span> Bình thường</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="radio"
-                name="feelings"
-                value="Không tốt"
-                class="form-radio text-purple-600"
-              />
-              Không tốt</label
+            <label class="radio-label">
+              <input type="radio" name="feelings" value="Không tốt" />
+              <span class="radio-custom"></span> Không tốt</label
             >
           </div>
         </div>
 
-        <!-- Phần Tâm trạng -->
-        <div>
-          <label class="block text-gray-700 font-semibold mb-2"
-            >Tâm trạng</label
+        <div class="card">
+          <label class="section-title"
+            ><i class="fas fa-smile icon"></i>Tâm trạng</label
           >
           <div class="checkbox-grid">
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="moods"
-                value="Bình tĩnh"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="moods" value="Bình tĩnh" />
               Bình tĩnh</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="moods"
-                value="Vui vẻ"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Vui vẻ</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="moods" value="Vui vẻ" /> Vui vẻ</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="moods"
-                value="Mạnh mẽ"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="moods" value="Mạnh mẽ" />
               Mạnh mẽ</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="moods"
-                value="Phấn chấn"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="moods" value="Phấn chấn" />
               Phấn chấn</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="moods"
-                value="Thất thường"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="moods" value="Thất thường" />
               Thất thường</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="moods"
-                value="Bực bội"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Bực bội</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="moods" value="Bực bội" /> Bực
+              bội</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="moods"
-                value="Buồn"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Buồn</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="moods" value="Buồn" /> Buồn</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="moods"
-                value="Lo lắng"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Lo lắng</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="moods" value="Lo lắng" /> Lo
+              lắng</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="moods"
-                value="Trầm cảm"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Trầm cảm</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="moods" value="Trầm cảm" /> Trầm
+              cảm</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="moods"
-                value="Cảm thấy có lỗi"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="moods" value="Cảm thấy có lỗi" />
               Cảm thấy có lỗi</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="moods"
-                value="Suy nghĩ ám ảnh"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="moods" value="Suy nghĩ ám ảnh" />
               Suy nghĩ ám ảnh</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="moods"
-                value="Thiếu năng lượng"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="moods" value="Thiếu năng lượng" />
               Thiếu năng lượng</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="moods"
-                value="Lãnh đạm"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Lãnh đạm</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="moods" value="Lãnh đạm" /> Lãnh
+              đạm</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="moods"
-                value="Bối rối"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Bối rối</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="moods" value="Bối rối" /> Bối
+              rối</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="moods"
                 value="Rất hay tự trách mình"
-                class="form-checkbox text-purple-600 rounded"
               />
               Rất hay tự trách mình</label
             >
           </div>
         </div>
 
-        <!-- Phần Triệu chứng -->
-        <div>
-          <label class="block text-gray-700 font-semibold mb-2"
-            >Triệu chứng</label
+        <div class="card">
+          <label class="section-title"
+            ><i class="fas fa-plus-circle icon"></i>Triệu chứng</label
           >
           <div class="checkbox-grid">
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="symptoms"
-                value="Mọi thứ đều ổn"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="symptoms" value="Mọi thứ đều ổn" />
               Mọi thứ đều ổn</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="symptoms"
-                value="Chuột rút"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="symptoms" value="Chuột rút" />
               Chuột rút</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="symptoms"
-                value="Sưng đau ngực"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="symptoms" value="Sưng đau ngực" />
               Sưng đau ngực</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="symptoms"
-                value="Đau đầu"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Đau đầu</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="symptoms" value="Đau đầu" /> Đau
+              đầu</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="symptoms"
-                value="Mụn"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Mụn</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="symptoms" value="Mụn" /> Mụn</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="symptoms"
-                value="Đau lưng"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Đau lưng</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="symptoms" value="Đau lưng" /> Đau
+              lưng</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="symptoms"
-                value="Mệt mỏi"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Mệt mỏi</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="symptoms" value="Mệt mỏi" /> Mệt
+              mỏi</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="symptoms"
-                value="Thèm ăn"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Thèm ăn</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="symptoms" value="Thèm ăn" /> Thèm
+              ăn</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="symptoms"
-                value="Mất ngủ"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Mất ngủ</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="symptoms" value="Mất ngủ" /> Mất
+              ngủ</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="symptoms"
-                value="Đau bụng"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Đau bụng</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="symptoms" value="Đau bụng" /> Đau
+              bụng</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="symptoms"
                 value="Ngứa âm đạo"
-                class="form-checkbox text-purple-600 rounded"
               />
               Ngứa âm đạo</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="symptoms"
                 value="Khô âm đạo"
-                class="form-checkbox text-purple-600 rounded"
               />
               Khô âm đạo</label
             >
           </div>
         </div>
 
-        <!-- Phần Tiêu hóa và chất thải -->
-        <div>
-          <label class="block text-gray-700 font-semibold mb-2"
-            >Tiêu hóa và chất thải</label
+        <div class="card">
+          <label class="section-title"
+            ><i class="fas fa-stomach icon"></i>Tiêu hóa và chất thải</label
           >
           <div class="checkbox-grid">
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="digestion"
-                value="Bình thường"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="digestion" value="Bình thường" />
               Bình thường</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="digestion"
-                value="Buồn nôn"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Buồn nôn</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="digestion" value="Buồn nôn" /> Buồn
+              nôn</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="digestion"
-                value="Đầy hơi"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Đầy hơi</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="digestion" value="Đầy hơi" /> Đầy
+              hơi</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="digestion"
-                value="Táo bón"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Táo bón</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="digestion" value="Táo bón" /> Táo
+              bón</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="digestion"
-                value="Tiêu chảy"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Tiêu chảy</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="digestion" value="Tiêu chảy" /> Tiêu
+              chảy</label
             >
           </div>
         </div>
 
-        <!-- Phần Khác -->
-        <div>
-          <label class="block text-gray-700 font-semibold mb-2">Khác</label>
+        <div class="card">
+          <label class="section-title"
+            ><i class="fas fa-ellipsis-h icon"></i>Khác</label
+          >
           <div class="checkbox-grid">
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="other"
-                value="Đi lại"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Đi lại</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="other" value="Đi lại" /> Đi lại</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="other"
-                value="Căng thẳng"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Căng thẳng</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="other" value="Căng thẳng" /> Căng
+              thẳng</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="other"
-                value="Thiền"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Thiền</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="other" value="Thiền" /> Thiền</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="other"
-                value="Bài tập Kegel"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Bài tập Kegel</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="other" value="Bài tập Kegel" /> Bài
+              tập Kegel</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="other"
-                value="Bài tập thở"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Bài tập thở</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="other" value="Bài tập thở" /> Bài
+              tập thở</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="other"
                 value="Bị bệnh hay bị thương"
-                class="form-checkbox text-purple-600 rounded"
               />
               Bị bệnh hay bị thương</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="other"
-                value="Rượu"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Rượu</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="other" value="Rượu" /> Rượu</label
             >
           </div>
         </div>
 
-        <!-- Phần Thuốc ngoài -->
-        <div class="form-group">
-          <label for="medication" class="block text-gray-700 font-semibold mb-2"
-            >Thuốc ngoài</label
+        <div class="card">
+          <label for="medication" class="section-title"
+            ><i class="fas fa-pills icon"></i>Thuốc ngoài</label
           >
           <input
             type="text"
             id="medication"
             name="medication"
             placeholder="Nhập tên thuốc bạn đang dùng"
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+            class="input-field"
           />
         </div>
 
-        <!-- Phần Cân nặng -->
-        <div class="form-group">
-          <label for="weight" class="block text-gray-700 font-semibold mb-2"
-            >Cân nặng (kg)</label
+        <div class="card">
+          <label for="weight" class="section-title"
+            ><i class="fas fa-weight icon"></i>Cân nặng (kg)</label
           >
           <input
             type="number"
@@ -460,301 +268,212 @@
             name="weight"
             step="0.1"
             placeholder="Nhập cân nặng của bạn"
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+            class="input-field"
           />
         </div>
 
-        <!-- Phần Hoạt động thể chất -->
-        <div>
-          <label class="block text-gray-700 font-semibold mb-2"
-            >Hoạt động thể chất</label
+        <div class="card">
+          <label class="section-title"
+            ><i class="fas fa-running icon"></i>Hoạt động thể chất</label
           >
           <div class="checkbox-grid">
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="exercise"
-                value="Không tập"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="exercise" value="Không tập" />
               Không tập</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="exercise"
-                value="Yoga"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Yoga</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="exercise" value="Yoga" /> Yoga</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="exercise"
-                value="Gym"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Gym</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="exercise" value="Gym" /> Gym</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="exercise"
                 value="Aerobic & nhảy múa"
-                class="form-checkbox text-purple-600 rounded"
               />
               Aerobic & nhảy múa</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="exercise"
-                value="Bơi lội"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Bơi lội</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="exercise" value="Bơi lội" /> Bơi
+              lội</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="exercise"
                 value="Thể thao đồng đội"
-                class="form-checkbox text-purple-600 rounded"
               />
               Thể thao đồng đội</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="exercise"
-                value="Chạy"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Chạy</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="exercise" value="Chạy" /> Chạy</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="exercise"
-                value="Đạp xe đạp"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Đạp xe đạp</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="exercise" value="Đạp xe đạp" /> Đạp
+              xe đạp</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="exercise"
-                value="Đi bộ"
-                class="form-checkbox text-purple-600 rounded"
-              />
-              Đi bộ</label
+            <label class="checkbox-label"
+              ><input type="checkbox" name="exercise" value="Đi bộ" /> Đi bộ</label
             >
           </div>
         </div>
 
-        <!-- Phần Hoạt động tình dục và nhu cầu tình dục -->
-        <div>
-          <label class="block text-gray-700 font-semibold mb-2"
-            >Hoạt động tình dục và nhu cầu tình dục</label
+        <div class="card">
+          <label class="section-title"
+            ><i class="fas fa-venus-mars icon"></i>Hoạt động tình dục và nhu cầu
+            tình dục</label
           >
           <div class="checkbox-grid">
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="sexualActivity"
                 value="Không quan hệ tình dục"
-                class="form-checkbox text-purple-600 rounded"
               />
               Không quan hệ tình dục</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="sexualActivity"
-                value="Thủ dâm"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="sexualActivity" value="Thủ dâm" />
               Thủ dâm</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="sexualActivity"
                 value="Quan hệ tình dục có bảo vệ"
-                class="form-checkbox text-purple-600 rounded"
               />
               Quan hệ tình dục có bảo vệ</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="sexualActivity"
                 value="Quan hệ tình dục không bảo vệ"
-                class="form-checkbox text-purple-600 rounded"
               />
               Quan hệ tình dục không bảo vệ</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="sexualActivity"
                 value="Quan hệ tình dục bằng miệng"
-                class="form-checkbox text-purple-600 rounded"
               />
               Quan hệ tình dục bằng miệng</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="sexualActivity"
                 value="Quan hệ tình dục qua đường hậu môn"
-                class="form-checkbox text-purple-600 rounded"
               />
               Quan hệ tình dục qua đường hậu môn</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="sexualActivity"
-                value="Cực khoái"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="sexualActivity" value="Cực khoái" />
               Cực khoái</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="sexualActivity"
                 value="Nhu cầu tình dục cao"
-                class="form-checkbox text-purple-600 rounded"
               />
               Nhu cầu tình dục cao</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="sexualActivity"
                 value="Nhu cầu tình dục bình thường"
-                class="form-checkbox text-purple-600 rounded"
               />
               Nhu cầu tình dục bình thường</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="sexualActivity"
                 value="Nhu cầu tình dục thấp"
-                class="form-checkbox text-purple-600 rounded"
               />
               Nhu cầu tình dục thấp</label
             >
           </div>
         </div>
 
-        <!-- Phần Tiết dịch âm đạo -->
-        <div>
-          <label class="block text-gray-700 font-semibold mb-2"
-            >Tiết dịch âm đạo</label
+        <div class="card">
+          <label class="section-title"
+            ><i class="fas fa-tint icon"></i>Tiết dịch âm đạo</label
           >
           <div class="checkbox-grid">
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="vaginalDischarge"
                 value="Không có dịch"
-                class="form-checkbox text-purple-600 rounded"
               />
               Không có dịch</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="vaginalDischarge"
                 value="Trắng đục"
-                class="form-checkbox text-purple-600 rounded"
               />
               Trắng đục</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="vaginalDischarge"
-                value="Ẩm ướt"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="vaginalDischarge" value="Ẩm ướt" />
               Ẩm ướt</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="vaginalDischarge"
                 value="Dạng dính"
-                class="form-checkbox text-purple-600 rounded"
               />
               Dạng dính</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="vaginalDischarge"
                 value="Như lòng trắng trứng"
-                class="form-checkbox text-purple-600 rounded"
               />
               Như lòng trắng trứng</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="vaginalDischarge"
-                value="Dạng đốm"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="vaginalDischarge" value="Dạng đốm" />
               Dạng đốm</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="vaginalDischarge"
                 value="Bất thường"
-                class="form-checkbox text-purple-600 rounded"
               />
               Bất thường</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="vaginalDischarge"
                 value="Trắng vón cục"
-                class="form-checkbox text-purple-600 rounded"
               />
               Trắng vón cục</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="vaginalDischarge"
-                value="Xám"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="vaginalDischarge" value="Xám" />
               Xám</label
             >
           </div>
         </div>
 
-        <!-- Phần Chu kì kinh nguyệt -->
-        <div class="form-group">
-          <label
-            for="menstrualFlow"
-            class="block text-gray-700 font-semibold mb-2"
-            >Lượng kinh nguyệt</label
+        <div class="card">
+          <label for="menstrualFlow" class="section-title"
+            ><i class="fas fa-calendar-alt icon"></i>Lượng kinh nguyệt</label
           >
-          <select
-            id="menstrualFlow"
-            name="menstrualFlow"
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-          >
+          <select id="menstrualFlow" name="menstrualFlow" class="select-field">
             <option value="">Chọn</option>
             <option value="Bình thường">Bình thường</option>
             <option value="Ít">Ít</option>
@@ -763,162 +482,128 @@
           </select>
         </div>
 
-        <!-- Phần Dấu hiệu rụng trứng -->
-        <div>
-          <label class="block text-gray-700 font-semibold mb-2"
-            >Dấu hiệu rụng trứng</label
+        <div class="card">
+          <label class="section-title"
+            ><i class="fas fa-egg icon"></i>Dấu hiệu rụng trứng</label
           >
           <div class="checkbox-grid">
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="ovulationSigns"
                 value="Thay đổi nhiệt độ cơ sở"
-                class="form-checkbox text-purple-600 rounded"
               />
               Thay đổi nhiệt độ cơ sở</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="ovulationSigns"
                 value="Dịch nhầy âm đạo"
-                class="form-checkbox text-purple-600 rounded"
               />
               Dịch nhầy âm đạo</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="ovulationSigns"
                 value="Xuất hiện đốm máu"
-                class="form-checkbox text-purple-600 rounded"
               />
               Xuất hiện đốm máu</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="ovulationSigns"
                 value="Tăng ham muốn tình dục"
-                class="form-checkbox text-purple-600 rounded"
               />
               Tăng ham muốn tình dục</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="ovulationSigns"
                 value="Sưng đầu ngực, đau vú"
-                class="form-checkbox text-purple-600 rounded"
               />
               Sưng đầu ngực, đau vú</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="ovulationSigns"
                 value="Đau bụng dưới và vùng chậu"
-                class="form-checkbox text-purple-600 rounded"
               />
               Đau bụng dưới và vùng chậu</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="ovulationSigns"
                 value="Cổ tử cung mở rộng"
-                class="form-checkbox text-purple-600 rounded"
               />
               Cổ tử cung mở rộng</label
             >
-            <label class="inline-flex items-center"
+            <label class="checkbox-label"
               ><input
                 type="checkbox"
                 name="ovulationSigns"
                 value="Âm đạo hoặc âm hộ bị sưng"
-                class="form-checkbox text-purple-600 rounded"
               />
               Âm đạo hoặc âm hộ bị sưng</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="ovulationSigns"
-                value="Đầy bụng"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="ovulationSigns" value="Đầy bụng" />
               Đầy bụng</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="ovulationSigns"
-                value="Đầy hơi"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="ovulationSigns" value="Đầy hơi" />
               Đầy hơi</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="ovulationSigns"
-                value="Buồn nôn"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="ovulationSigns" value="Buồn nôn" />
               Buồn nôn</label
             >
-            <label class="inline-flex items-center"
-              ><input
-                type="checkbox"
-                name="ovulationSigns"
-                value="Nhức đầu"
-                class="form-checkbox text-purple-600 rounded"
-              />
+            <label class="checkbox-label"
+              ><input type="checkbox" name="ovulationSigns" value="Nhức đầu" />
               Nhức đầu</label
             >
           </div>
         </div>
 
-        <!-- Phần Thuốc tránh thai -->
-        <div>
-          <label for="ocp" class="block text-gray-700 font-semibold mb-2"
-            >Thuốc tránh thai đường uống (OC)</label
+        <div class="card">
+          <label for="ocp" class="section-title"
+            ><i class="fas fa-tablets icon"></i>Thuốc tránh thai đường uống
+            (OC)</label
           >
-          <div class="flex flex-col sm:flex-row gap-4">
-            <label class="inline-flex items-center"
+          <div class="radio-group">
+            <label class="radio-label"
               ><input
                 type="radio"
                 name="ocp"
                 value="Đã uống thuốc đúng giờ"
-                class="form-radio text-purple-600"
               />
-              Đã uống thuốc đúng giờ</label
+              <span class="radio-custom"></span> Đã uống thuốc đúng giờ</label
             >
-            <label class="inline-flex items-center"
+            <label class="radio-label"
               ><input
                 type="radio"
                 name="ocp"
                 value="Đã uống bù/ quên thuốc"
-                class="form-radio text-purple-600"
               />
-              Đã uống bù/ quên thuốc</label
+              <span class="radio-custom"></span> Đã uống bù/ quên thuốc</label
             >
           </div>
         </div>
 
-        <div class="flex justify-center mt-6">
-          <button
-            type="submit"
-            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105"
-          >
-            Gửi Dữ Liệu
+        <div class="flex justify-center mt-8">
+          <button type="submit" class="submit-button">
+            Xem kết quả <i class="fas fa-paper-plane ml-2"></i>
           </button>
         </div>
       </form>
 
       <div id="adviceContainer" class="message-box hidden">
-        <h3 class="text-xl font-bold text-purple-800 mb-2">
+        <h3 class="text-xl font-semibold text-fuchsia-800 mb-2">
           Lời khuyên và giải pháp
         </h3>
         <p id="adviceContent" class="text-gray-700 whitespace-pre-wrap"></p>
@@ -929,6 +614,6 @@
         class="mt-4 text-center text-sm font-medium"
       ></div>
     </div>
-      <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
