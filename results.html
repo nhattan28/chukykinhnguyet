@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kết quả nhật ký sức khỏe của bạn</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-pink-100 to-purple-100 text-gray-800 font-sans min-h-screen flex flex-col justify-between"
+  >
+    <div class="container mx-auto p-6 flex-grow">
+      <header class="text-center mb-8">
+        <h1
+          class="text-3xl sm:text-4xl font-bold text-fuchsia-800"
+          style="font-family: 'Playfair Display', serif"
+        >
+          Lời khuyên dành cho bạn
+        </h1>
+        <p
+          class="text-fuchsia-600 mt-2 text-lg italic"
+          style="font-family: 'Cormorant Garamond', serif"
+        >
+          Hãy đọc và áp dụng để có một ngày thật khỏe mạnh nhé!
+        </p>
+      </header>
+
+      <div class="message-box mt-10">
+        <h3
+          class="text-2xl font-semibold text-fuchsia-800 mb-4 flex items-center"
+          style="font-family: 'Playfair Display', serif"
+        >
+          <i class="fas fa-lightbulb icon mr-3"></i>Lời khuyên
+        </h3>
+        <p
+          id="adviceContent"
+          class="text-gray-700 whitespace-pre-wrap leading-relaxed"
+          style="font-family: 'Roboto', sans-serif"
+        ></p>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="index.html" class="back-button">
+          <i class="fas fa-arrow-left mr-2"></i> Quay lại
+        </a>
+      </div>
+    </div>
+
+    <footer
+      class="mt-8 py-4 text-center text-fuchsia-700 text-sm"
+      style="font-family: 'Roboto', sans-serif"
+    >
+      <p>&copy; 2025 Nhật ký sức khỏe. Mọi quyền được bảo lưu.</p>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const adviceContent = document.getElementById('adviceContent');
+        const advice = localStorage.getItem('healthAdvice');
+
+        if (advice) {
+          adviceContent.textContent = advice;
+        } else {
+          adviceContent.textContent =
+            'Hiện chưa có lời khuyên nào dành cho bạn. Hãy tiếp tục ghi chép để nhận được những gợi ý hữu ích nhé!';
+        }
+      });
+    </script>
+  </body>
+</html>
